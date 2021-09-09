@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/main.css" media="all">
+    <!--<link rel="stylesheet" href="./css/main.css" type="text/css">-->
+    <!-- Internal styling -->
+    <style>
+        /* apply to span immediately that after p */
+        /*p + span {*/
+        /*    background-color: yellow;*/
+        /*}*/
+
+        /* apply to all span (sibling) that after p */
+        p ~ span {
+            background-color: yellow;
+        }
+
+        /* apply to all span that are children of p */
+        p > span {
+            background-color: aquamarine;
+        }
+
+        /* Pseudo-elements */
+        p::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+
+        /* Pseudo-elements and CSS classes (intro is CSS class, first-line is Pseudo-elements) */
+        p.intro::first-line {
+            background-color: blue;
+        }
+
+        /* Pseudo-classes */
+        /* unvisited link */
+        a:link {
+            color: #FF0000;
+        }
+
+        /* visited link */
+        a:visited {
+            color: #00FF00;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: #FF00FF;
+        }
+
+        /* selected link */
+        a:active {
+            color: #0000FF;
+        }
+
+        /* Pseudo-classes and CSS classes */
+        a.highlight:hover {
+            color: cadetblue;
+        }
+
+        span:nth-child(2) {
+            font-size: 30px;
+        }
+
+        /* Selector: footer */
+        /* Properties: border-top, text-align, font-size, line-height, margin-top */
+        /* A value is given to the property following a colon. */
+        /* Semicolons are used to separate the properties. */
+        footer {
+            border-top: 1px solid gray;
+            text-align: center;
+            font-size: .8em;
+            line-height: 4em;
+            margin-top: 1em;
+        }
+
+        #special1 {
+
+        }
+
+    </style>
+</head>
+<!--<body style="margin: 0;">-->
+<body>
+<header>
+    <a href="#" class="logo"></a>
+    <nav>
+        <a href="#" class="menu-icon"></a>
+        <ul>
+            <li><a href="./index.html" class="current">Home</a></li>
+            <li><a href="./views/about.html">About</a></li>
+            <li><a href="#" title="PF">Work</a></li>
+            <li><a href="#" target="_blank">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="./test/test-flexbox.html">Flex Box</a></li>
+        </ul>
+    </nav>
+    <h1>Home</h1>
+</header>
+
+<main>
+    <section>
+        <h2>First Section</h2>
+        <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit, sed do eiusmod</p>
+        <p class="intro">This is a long paragraph. <strong>Pseudo-classes:</strong> Match one or more elements that
+            exist in a certain
+            state, such as an element that is being hovered over by the mouse pointer, or a checkbox that is currently
+            disabled or checked, or an element that is the first child of its parent in the DOM tree. <strong>Pseudo-elements:</strong>
+            Match one or more parts of content that are in a certain position in relation to an element, for example the
+            first word of each paragraph, or generated content appearing just before an element.</p>
+        <div>
+            <p><span>Next to</span> <span>span</span> This is a paragraph.</p>
+            <span>This span1 is after the paragraph.</span>
+            <span>This span2 is after the paragraph.</span>
+            <span>This span3 is after the paragraph.</span>
+        </div>
+        <div>
+            <span>Why the</span>
+            <span>New Line?</span>
+        </div>
+        <div>
+            <a href="https://github.com/WasinSanguansuk" class="highlight">My GitHub Repos</a>
+        </div>
+        <div class="img-container">
+            <img src="./images/sunrise.jpg"/>
+        </div>
+    </section>
+    <section>
+        <h2>Form Section</h2>
+        <div>
+            <form>
+                <label for="message">Tell Me Everything</label>
+                <textarea id="message" cols="50" rows="10"></textarea>
+                <br/>
+                <label for="car">Car Brand</label>
+                <input id="car" list="cars"/>
+                <datalist id="cars">
+                    <option value="BMW"/>
+                    <option value="Ford"/>
+                    <option value="Volvo"/>
+                    <option value="Honda"/>
+                    <option value="Toyota"/>
+                </datalist>
+                <br/>
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <optgroup label="Europe">
+                        <option value="UK">UK</option>
+                        <option value="Germany">Germany</option>
+                        <option value="France">France</option>
+                    </optgroup>
+
+                    <optgroup label="North America">
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                    </optgroup>
+                </select>
+                <br/>
+                <input name="submit" type="submit" value="save"/>
+            </form>
+        </div>
+    </section>
+    <section>
+        <h2>Box Model Visual</h2>
+        <!-- Inline styling -->
+        <div style="width: 400px; height: 400px;
+                    background-color: red;
+                    padding: 10px;
+                    border: 2px solid green;
+                    margin: 0;">
+            <div style="width: 100px; height: 100px;
+                        background-color: blue;
+                        padding: 10px;
+                        border: 2px solid white;
+                        margin: 0;">
+                Inner DIV 1
+            </div>
+            <div style="width: 200px; height: 100px;
+                        background-color: yellowgreen;
+                        padding: 10px;
+                        border: 2px solid darkblue;
+                        margin: 20px;">
+                Inner DIV 2
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="big-box">
+            <div class="box">
+                Div 1
+            </div>
+        </div>
+        <div class="big-box">
+            <div class="animated-box">
+                Div 1
+            </div>
+        </div>
+        <div class="big-box">
+            <div class="transform-circle">
+                Circle
+            </div>
+        </div>
+        <div class="big-box">
+            <div class="fade-in-down">
+                Box
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+
+</footer>
+</body>
+</html>

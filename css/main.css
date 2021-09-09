@@ -1,0 +1,218 @@
+
+@import url('https://fonts.googleapis.com/css?family=Mali');
+
+@media (min-width: 720px) and (max-width: 1080px) {
+    p {
+        color: deeppink; !important
+    }
+}
+
+h1, a {
+    font-family: 'Mali', cursive;
+}
+
+.img-container {
+    /*width: 400px;*/
+    width: 800px;
+    /*height: 350px;*/
+    /*height: 100%;*/
+    height: 750px;
+    margin: auto;
+    border: none;
+    background-color: aqua;
+    background-image: url("../images/sunrise.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid lightblue;
+    border-radius: 10px 10px 400px 10px;
+    box-shadow: 15px 15px 10px;
+    display: none;
+}
+
+#id-p1 {
+    color: greenyellow;
+}
+
+#id-p2 {
+    /*color: rgba(83%, 48%, 3%, .55);*/
+    /*color: rgb(83%, 48%, 3%);*/
+    /*color: rgb(211, 122, 7);*/
+    color: rgba(211, 122, 7, .55);
+}
+
+#id-p3 {
+    /*color: #fc036f;*/
+    color: #fc036fff;
+    /*color: #fc036fcc;*/
+}
+
+.big-box {
+    width: 400px;
+    height: 300px;
+    background-color: bisque;
+    border: 2px solid;
+}
+
+/*.box {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    background-color: red;*/
+/*    border: 5px solid lightskyblue;*/
+/*    !*transition: background-color 2s linear 2s;*!*/
+/*    transition-property: background-color, border, height, width;*/
+/*    transition-duration: 2s, 2s, 2s, 2s;*/
+/*    !*transition-duration: 2s;*!*/
+/*}*/
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    left: 0;
+    top: 0;
+    /*position: absolute;*/
+    position: relative;
+    transition-property: background-color, width, height, font-size, left, top, transform, color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+/*.box:hover {*/
+/*    width: 150px;*/
+/*    height: 50px;*/
+/*    background-color: lightskyblue;*/
+/*    border: 5px dashed red;*/
+/*}*/
+.box:hover {
+    transform: rotate(270deg);
+    width: 150px;
+    height: 75px;
+    background-color: blue;
+    color: yellow;
+    font-size: 28px;
+    left: 25px;
+    top: 10px;
+    /*position: absolute;*/
+    position: relative;
+    transition-property: background-color, width, height, font-size, left, top, transform, color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.animated-box {
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+    position: relative;
+    -webkit-animation-name: flash;
+    animation-delay: 2s;
+    animation-iteration-count: 8;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    /*animation-direction: alternate-reverse;*/
+    /*animation-direction: normal;*/
+    /*animation-direction: reverse;*/
+}
+
+@-webkit-keyframes flash {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes flash {
+/*@-webkit-keyframes flash {*/
+/*@keyframes flash {*/
+    0% {
+        opacity: 1;
+        top: 0;
+    }
+
+    50% {
+        opacity: .5;
+        top: 20px;
+        left: 20px;
+    }
+
+    50% {
+        top: 40px; !important;
+    }
+
+    100% {
+        opacity: 0;
+        top: 80px;
+    }
+}
+
+@keyframes flash {
+    /*@-webkit-keyframes flash {*/
+    /*@keyframes flash {*/
+    0% {
+        opacity: 1;
+        top: 0;
+    }
+
+    50% {
+        opacity: .5;
+        top: 20px;
+        left: 20px;
+    }
+
+    50% {
+        top: 40px; !important;
+    }
+
+    100% {
+        opacity: 0;
+        top: 80px;
+    }
+}
+
+.transform-circle {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border-radius: 50%;
+    text-align: center;
+    /*animation-duration: 2s;*/
+    transform: translate(10px, 40px) rotate(90deg);
+    /*animation-direction: alternate;*/
+}
+
+.fade-in-down {
+    -webkit-animation-name: fade-in-down;
+    animation-name: fade-in-down;
+    animation-duration: 2s;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    text-align: center;
+    animation-direction: alternate;
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+

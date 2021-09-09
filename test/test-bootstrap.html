@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test-bootstrap</title>
+
+    <!-- Bootstrap CSS (before all other stylesheets) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles-bootstrap.css">
+
+</head>
+<body>
+<header>
+    <!-- header -->
+</header>
+<main>
+    <!-- main -->
+    <h1>Hello, world!</h1>
+
+    <section>
+        <h3>Basic example</h3>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                   aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+                   aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div>
+
+        <label for="basic-url" class="form-label">Your vanity URL</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text">.00</span>
+        </div>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-text">With textarea</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+    </section>
+    <section>
+        <h3>Sizing</h3>
+
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                   aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                   aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                   aria-describedby="inputGroup-sizing-lg">
+        </div>
+    </section>
+    <section>
+        <h3>Demo 1</h3>
+
+        <!-- Extra small devices (portrait phones, less than 576px) -->
+        <!-- Small devices (landscape phones, 576px and up) -->
+        <!-- Medium devices (tablets, 768px and up) -->
+        <!-- Large devices (desktops, 992px and up) -->
+        <!-- Extra large devices (large desktops, 1200px and up) -->
+
+        <!--<div class="container-fluid">-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-2">Col One</div>
+                <div class="col-sm-12 col-md-6 col-lg-8">Col Two</div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 order-md-2">Col One</div>
+                <div class="col-sm-6 order-md-1">Col Two</div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 offset-2">Col One</div>
+                <div class="col-sm-4 offset-1">Col Two</div>
+            </div>
+
+            <!--<div class="row my-custom-row justify-content-center align-items-center">-->
+            <div class="row my-custom-row justify-content-start align-items-center gx-10">
+                <div class="col-sm-4">
+                    <div class="p-3 border bg-light">Col One</div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="p-3 border bg-light">Col Two</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </div>
+                <div class="col">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Demo 2</h3>
+
+        <div class="jumbotron">
+            <h1>Insert Valid HTML Text Here.</h1>
+        </div>
+
+        <div class="page-header">
+            <h1>Example Page Header</h1>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">U1</div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">U2</div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">U3</div>
+            </div>
+        </div>
+
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+            </tr>
+            <tr>
+                <td>Wasin</td>
+                <td>Sanguansuk</td>
+            </tr>
+            <tr>
+                <td>Mutita</td>
+                <td>Ontimvong</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!-- Carousel Example -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./images-bootstrap/la.jpg" alt="Los Angeles">
+                </div>
+                <div class="item">
+                    <img src="./images-bootstrap/chicago.jpg" alt="Chicago">
+                </div>
+                <div class="item">
+                    <img src="./images-bootstrap/ny.jpg" alt="New York">
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./images-bootstrap/sample.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on
+                    the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <!-- Not working -->
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </div>
+
+        <!-- Not working -->
+        <div>
+            <form action="/action_page.php">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Super Safe Login</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Credit Card info and SSN" id="usr"
+                           name="username">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <!-- Not working -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">RESTful Restaurant</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="pagination">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                <span class="sr-only">70% Complete</span>
+            </div>
+        </div>
+
+
+    </section>
+    <section>
+        <p>This is the last section of main in body</p>
+    </section>
+
+</main>
+<aside>
+    <!-- aside -->
+</aside>
+<footer>
+    <!-- footer -->
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+</html>
