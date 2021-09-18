@@ -80,6 +80,20 @@
 
         }
 
+        /* Testing header 4 */
+        span {
+            background-color: green;
+        }
+
+        /* all the span in div */
+        div span {
+            background-color: pink;
+        }
+
+        /* span that are children of div */
+        div > span {
+            background-color: red;
+        }
     </style>
 </head>
 <!--<body style="margin: 0;">-->
@@ -126,6 +140,21 @@
         <div class="img-container">
             <img src="./images/sunrise.jpg"/>
         </div>
+    </section>
+    <section>
+        <h4>Testing header 4</h4>
+        <div>
+            <span>
+                Span #0, in the div (first child).
+            </span>
+            <span>
+                Span #1, in the div.
+                <span>
+                    Span #2, in the span that's in the div.
+                </span>
+            </span>
+        </div>
+        <span>Span #3, not in the div at all.</span>
     </section>
     <section>
         <h2>Form Section</h2>
