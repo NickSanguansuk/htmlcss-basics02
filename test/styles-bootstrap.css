@@ -4,6 +4,12 @@
     height: 400px;
 }
 
+/* ########## Testing Section ########## */
+
+.my-test-background-image {
+    background-image: url("images-bootstrap/test/test-shoes-background.jpg");
+    background-color: #cccccc;
+}
 
 
 
